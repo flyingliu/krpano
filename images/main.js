@@ -77,29 +77,29 @@ $(function(){
 
 
 embedpano({
-  swf:"../krpano/krpano.swf",
+  swf:"/krpano/krpano/krpano.swf",
   id:'pano-1',
   wmode:"transparent",
-  xml:"../pano/1.xml",
+  xml:"/krpano/pano/1.xml",
   target:'pano1'});
 
 embedpano({
-  swf:"../krpano/krpano.swf",
+  swf:"/krpano/krpano/krpano.swf",
   id:'pano-2',
   wmode:"transparent",
-  xml:"../pano/2.xml",
+  xml:"/krpano/pano/2.xml",
   target:'pano2'});
 
 embedpano({
-  swf:"../krpano/krpano.swf",
+  swf:"/krpano/krpano/krpano.swf",
   id:'pano-3',
   wmode:"transparent",
-  xml:"../pano/3.xml",
+  xml:"/krpano/pano/3.xml",
   target:'pano3'});
 
 embedpano({
-  swf:"../krpano/krpano.swf",
+  swf:"/krpano/krpano/krpano.swf",
   id:'pano-4',
   wmode:"transparent",
-  xml:"../pano/4.xml",
+  xml:"/krpano/pano/4.xml",
   target:'pano4'});
