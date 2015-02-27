@@ -2,7 +2,6 @@
 // http://pano-sdk-js.cdn.jinglvtong.com/sdk/iframe/noskin.html?pano_id=7233
 // 四个引导页的ID从7230-7233
 
-
 function getQueryString(name) {
   var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
   var r = window.location.search.substr(1).match(reg);
@@ -11,9 +10,9 @@ function getQueryString(name) {
 
 $(function(){
 
-
   var id = getQueryString("id")?getQueryString("id"):0;
   var pageLen = $('.page li').length;
+  var flag = true;
 
   function anima(id) {
     var curNode = $('.page li').eq(id);
@@ -24,25 +23,14 @@ $(function(){
     curNode.find('.a3').addClass('slideIn3');
     var target = curNode.find('.bg')[0];
     var dx, dy,winX;
-    // touch.on(target, 'swiperight', function(ev){
-    //   var imgW = $(target).width();
-    //   var winW = $(window).width();
-    //   var d = winW - imgW;
-    //   $(target).animate({'left':d},1000,function(){
-    //     curNode.removeClass('active');
-    //     id++;
-    //     if(id<pageLen){
-    //       anima(id);
-    //     } else {
-    //       console.log(id);
-    //     }
-    //   })
-    // });
+    touch.on(target, 'touchstart', function(ev){
+      ev.preventDefault();
+    });
 
     touch.on(target, 'dragend', function(ev){
-      dx = ev.x;
+      dx = Math.abs(ev.x);
       dy = ev.y;
-      winX = $(window).width()*.5;
+      winX = $(window).width()*.3;
       if(dx>winX) {
         var imgW = $(target).width();
         var winW = $(window).width();
@@ -57,22 +45,19 @@ $(function(){
           }
         })
       } else {
-        // console.log(dx + '---' + winX);
+        console.log(dx + '---' + winX);
       }
     });
-
   }
 
   anima(id);
 
-  // $('.page li').click(function(){
-  //   id++;
-  //   if(id<pageLen){
-  //     anima(id);
-  //   }
-  // });
+  $(".help").click(function(){
+    $(this).hide();
+  });
 
 });
+
 
 
 
