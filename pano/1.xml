@@ -1,56 +1,13 @@
 <krpano version="1.16" onstart="startup();">
   <!-- <security cors="anonymous" /> -->
-  <include url="%SWFPATH%/skin.xml" devices="desktop"/>
+  <include url="%$mypath%/skin.xml" devices="desktop"/>
   <autorotate enabled="false" waittime="1.5" accel="1.5" speed="5" horizon="15.0" />
 
   <action name="startup">
   if(startscene === null, copy(startscene,scene[0].name)); loadscene(get(startscene), null, MERGE);
   </action>
 
-          <scenegroup name="scenegroup_7233" title="引导页1" thumburl="http://pano-sdk-js.cdn.jinglvtong.com/uploads/22/c5/22c5190b871e183789d5ccd3d2f20627/thumb.jpg" linkedscene="scene_7233" />
-    <scene name="scene_7233" group="scenegroup_7233">
-      <view fovtype="MFOV" fov="80" maxpixelzoom="1.5" fovmin="45" fovmax="90" limitview="auto"/>
-      <preview url="http://pano-sdk-js.cdn.jinglvtong.com/uploads/22/c5/22c5190b871e183789d5ccd3d2f20627/cube/preview.jpg" />
-      <image type="CUBE" multires="true" progressive="true" tilesize="256">
-        <cube url="http://pano-sdk-js.cdn.jinglvtong.com/uploads/22/c5/22c5190b871e183789d5ccd3d2f20627/cube/1024l_%s.jpg" />
-      </image>
-        
-    </scene>
-          <scenegroup name="scenegroup_7230" title="引导页2" thumburl="http://pano-sdk-js.cdn.jinglvtong.com/uploads/e2/03/e20382961a6481b4c60f3cde64cc4da6/thumb.jpg" linkedscene="scene_7230" />
-    <scene name="scene_7230" group="scenegroup_7230">
-      <view fovtype="MFOV" fov="80" maxpixelzoom="1.5" fovmin="45" fovmax="90" limitview="auto"/>
-      <preview url="http://pano-sdk-js.cdn.jinglvtong.com/uploads/e2/03/e20382961a6481b4c60f3cde64cc4da6/cube/preview.jpg" />
-      <image type="CUBE" multires="true" progressive="true" tilesize="256">
-        <cube url="http://pano-sdk-js.cdn.jinglvtong.com/uploads/e2/03/e20382961a6481b4c60f3cde64cc4da6/cube/1024l_%s.jpg" />
-      </image>
-        
-    </scene>
-          <scenegroup name="scenegroup_7231" title="引导页4" thumburl="http://pano-sdk-js.cdn.jinglvtong.com/uploads/73/a7/73a7952f57187cf88afe869d80de7a63/thumb.jpg" linkedscene="scene_7231" />
-    <scene name="scene_7231" group="scenegroup_7231">
-      <view fovtype="MFOV" fov="80" maxpixelzoom="1.5" fovmin="45" fovmax="90" limitview="auto"/>
-      <preview url="http://pano-sdk-js.cdn.jinglvtong.com/uploads/73/a7/73a7952f57187cf88afe869d80de7a63/cube/preview.jpg" />
-      <image type="CUBE" multires="true" progressive="true" tilesize="256">
-        <cube url="http://pano-sdk-js.cdn.jinglvtong.com/uploads/73/a7/73a7952f57187cf88afe869d80de7a63/cube/1024l_%s.jpg" />
-      </image>
-        
-    </scene>
-          <scenegroup name="scenegroup_7232" title="引导页3" thumburl="http://pano-sdk-js.cdn.jinglvtong.com/uploads/95/60/95605f6505c3ab8ad03170ffdb992f72/thumb.jpg" linkedscene="scene_7232" />
-    <scene name="scene_7232" group="scenegroup_7232">
-      <view fovtype="MFOV" fov="80" maxpixelzoom="1.5" fovmin="45" fovmax="90" limitview="auto"/>
-      <preview url="http://pano-sdk-js.cdn.jinglvtong.com/uploads/95/60/95605f6505c3ab8ad03170ffdb992f72/cube/preview.jpg" />
-      <image type="CUBE" multires="true" progressive="true" tilesize="256">
-        <cube url="http://pano-sdk-js.cdn.jinglvtong.com/uploads/95/60/95605f6505c3ab8ad03170ffdb992f72/cube/1024l_%s.jpg" />
-      </image>
-        
-    </scene>
-          <scenegroup name="scenegroup_7233" title="引导页1" thumburl="http://pano-sdk-js.cdn.jinglvtong.com/uploads/22/c5/22c5190b871e183789d5ccd3d2f20627/thumb.jpg" linkedscene="scene_7233" />
-    <scene name="scene_7233" group="scenegroup_7233">
-      <view fovtype="MFOV" fov="80" maxpixelzoom="1.5" fovmin="45" fovmax="90" limitview="auto"/>
-      <preview url="http://pano-sdk-js.cdn.jinglvtong.com/uploads/22/c5/22c5190b871e183789d5ccd3d2f20627/cube/preview.jpg" />
-      <image type="CUBE" multires="true" progressive="true" tilesize="256">
-        <cube url="http://pano-sdk-js.cdn.jinglvtong.com/uploads/22/c5/22c5190b871e183789d5ccd3d2f20627/cube/1024l_%s.jpg" />
-      </image>
-        
-    </scene>
+  <preview type="grid(cube,16,16,512,0xCCCCCC,0xFFFFFF,0x999999);" />
+    
   
 </krpano>
