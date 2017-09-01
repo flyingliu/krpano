@@ -4,10 +4,41 @@
   <autorotate enabled="false" waittime="1.5" accel="1.5" speed="5" horizon="15.0" />
 
   <action name="startup">
-  if(startscene === null, copy(startscene,scene[0].name)); loadscene(get(startscene), null, MERGE);
+    if(startscene === null, copy(startscene,scene[0].name)); loadscene(get(startscene), null, MERGE);
   </action>
 
   <preview type="grid(cube,16,16,512,0xCCCCCC,0xFFFFFF,0x999999);" />
-    
-  
+
+	<scene name="pano1" title="Achilleion - Garden" onstart=""  lat="39.563340" lng="19.904324" heading="0.0">
+		<view hlookat="-1" vlookat="11" fovtype="MFOV" fov="81"  limitview="auto" />
+		<preview url="/images/1.jpg" />
+		<image>
+			<cylinder url="/images/1.jpg" />
+		</image>
+	</scene>
+
+	<scene name="pano2" title="Achilleion - Garden" onstart=""  lat="39.563340" lng="19.904324" heading="0.0">
+		<view hlookat="-1" vlookat="11" fovtype="MFOV" fov="120" limitview="auto" />
+		<preview url="/images/2.jpg" />
+		<image>
+			<cylinder url="/images/2.jpg" />
+		</image>
+	</scene>
+
+	<scene name="pano3" title="Achilleion - Garden" onstart=""  lat="39.563340" lng="19.904324" heading="0.0">
+		<view hlookat="-1" vlookat="11" fovtype="MFOV" fov="120" limitview="auto" />
+		<preview url="/images/3.jpg" />
+		<image>
+			<cylinder url="/images/3.jpg" />
+		</image>
+	</scene>
+
+	<scene name="pano4" title="Achilleion - Garden" onstart=""  lat="39.563340" lng="19.904324" heading="0.0">
+		<view hlookat="-1" vlookat="11" fovtype="MFOV" fov="120" limitview="auto" />
+		<preview url="/images/4.jpg" />
+		<image>
+			<cylinder url="/images/4.jpg" />
+		</image>
+	</scene>
+
 </krpano>

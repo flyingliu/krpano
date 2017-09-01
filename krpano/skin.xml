@@ -9,7 +9,13 @@
 
     <control mousetype="drag2D" />
 
-
+	<plugin name="myplugin"
+	        url.html5="plugin.js"
+	        align="center" y="-150"
+	        mode="testing"
+	        value="200.0"
+	        onclick="dosomething('hello', 'plugin');"
+	/>
 
 	<contextmenu>
         <item name="copyright" caption="(C) 优联商业影像平台" enabled="true" visible="true" />

@@ -60,6 +60,7 @@ $(function() {
 });
 
 
+var mypano;
 
 
 embedpano({
@@ -67,9 +68,17 @@ embedpano({
     wmode: "transparent",
     xml: "pano/1.xml",
     target: 'pano1',
-    initvars: { mypath: "/krpano/" }
-
+    initvars: { mypath: "/krpano/" },
+    onready: krpanoReady
 });
+
+function krpanoReady(krpano) {
+    var s1 = krpano.get("events['skin_events']")
+    var fov = krpano.get("view");
+    krpano.call("loadscene('pano2',null,MERGE,BLEND(1));");
+    console.log(fov);
+    krpano.call("trace(krpano is ready...)");
+}
 
 embedpano({
     id: 'pano-2',
