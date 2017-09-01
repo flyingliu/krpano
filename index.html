@@ -6,31 +6,12 @@
     <title>2014中国自驾游路线评选 为您720度全景展现</title>
     <meta meta="meta" name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
     <link rel="stylesheet" href="images/style.css" />
-    <script src="krpano/krpano.js"></script>
-    <script src="krpano/embedpano.js"></script>
-    <script src="images/jquery.js"></script>
-    <script src="images/touch.min.js"></script>
-    <script src="images/viewport.js"></script>
+    <script src="https://cdn.bootcss.com/require.js/2.3.5/require.js"></script>
 </head>
 
 <body>
-    <div class="page">
-        <ul>
-            <li class="p1">
-                <div id="pano1" class="bg"></div><img src="images/p1_0.png" alt="" class="a0" /><img src="images/p1_1.png" alt="" class="a1" /><img src="images/p1_2.png" alt="" class="a2" /><img src="images/p1_3.png" alt="" class="a3" /><img src="images/p_b.png" alt="" class="copy"
-                /></li>
-            <li class="p2">
-                <div id="pano2" class="bg"></div><img src="images/p2_0.png" alt="" class="a0" /><img src="images/p2_1.png" alt="" class="a1" /><img src="images/p_b.png" alt="" class="copy" /></li>
-            <li class="p3">
-                <div id="pano3" class="bg"></div><img src="images/p3_0.png" alt="" class="a0" /><img src="images/p3_1.png" alt="" class="a1" /><img src="images/p_b.png" alt="" class="copy" /></li>
-            <li class="p4 last">
-                <div id="pano4" class="bg"></div><img src="images/p4_0.png" alt="" class="a0" /><img src="images/p4_1.png" alt="" class="a1" /><img src="images/p_b.png" alt="" class="copy" /></li>
-        </ul>
-    </div>
-    <div class="help">
-        <div class="act floating"></div>
-    </div>
-    <script src="images/main.js"></script>
+    <div class="page" id="pano"></div>
+    <script src="js/enter.js"></script>
 </body>
 
 </html>

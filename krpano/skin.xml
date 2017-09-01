@@ -11,15 +11,12 @@
 
 	<plugin name="myplugin"
 	        url.html5="plugin.js"
-	        align="center" y="-150"
-	        mode="testing"
-	        value="200.0"
-	        onclick="dosomething('hello', 'plugin');"
+			keep="true"
 	/>
 
-	<contextmenu>
-        <item name="copyright" caption="(C) 优联商业影像平台" enabled="true" visible="true" />
-        <item name="company" caption="上海汇联皆景信息科技有限公司" enabled="true" visible="true" />
+	<contextmenu fullscreen="false" device="ie" visible="false">
+        <item name="copyright" caption="from" enabled="true" visible="true" />
+        <item name="company" caption="ananfo.com" enabled="true" visible="true" />
     </contextmenu>
 
 	<!-- auto text -->
