@@ -73,8 +73,10 @@ embedpano({
 });
 
 function krpanoReady(krpano) {
+
     var s1 = krpano.get("events['skin_events']")
     var fov = krpano.get("view");
+    mypano = krpano;
     krpano.call("loadscene('pano2',null,MERGE,BLEND(1));");
     console.log(fov);
     krpano.call("trace(krpano is ready...)");
