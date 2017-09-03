@@ -1,10 +1,14 @@
 <krpano version="1.16" onstart="startup();">
   <!-- <security cors="anonymous" /> -->
   <include url="%$mypath%/skin.xml" />
-  <autorotate enabled="false" waittime="1.5" accel="1.5" speed="5" horizon="15.0" />
+  <autorotate enabled="true"
+            waittime="5.0" 
+            speed="-3.0" 
+            horizon="0.0" 
+            tofov="120.0" 
+            />
 
   <action name="startup">
-  	showlog();
     if(startscene === null, copy(startscene,scene[0].name)); loadscene(get(startscene), null, MERGE);
   </action>
 
