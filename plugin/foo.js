@@ -1,0 +1,5 @@
+define({
+    foo() {
+        return "foo"
+    }
+});

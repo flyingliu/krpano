@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+html(lang="en")
+head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title Document
+    link(rel="stylesheet", href="images/n.css")
+body
+
+    div.g-number-container.vision.preserve
+        div.g-number-rotate.preserve
+            div.g-number.preserve(data-digit=1)
+                - for(var i=0; i<7; i++)  
+                    div.g-line.preserve.translate
+            div.g-number.preserve(data-digit=2)
+                - for(var i=0; i<7; i++)  
+                    div.g-line.preserve.translate
+            div.g-number.preserve(data-digit=3)
+                - for(var i=0; i<7; i++)  
+                    div.g-line.preserve.translate
+            //- div.g-comma.preserve
+            div.g-number.preserve(data-digit=4)
+                - for(var i=0; i<7; i++)  
+                    div.g-line.preserve.translate
+            div.g-number.preserve(data-digit=5)
+                - for(var i=0; i<7; i++)  
+                    div.g-line.preserve.translate
+            div.g-number.preserve(data-digit=6)
+                - for(var i=0; i<7; i++)  
+                    div.g-line.preserve.translate
+    script(src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js")
+    script(src="js/n.js")

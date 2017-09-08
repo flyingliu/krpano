@@ -1,0 +1,5 @@
+define({
+    bar() {
+        return "bar"
+    }
+});
