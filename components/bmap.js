@@ -91,7 +91,8 @@ define([
                             scrollX: true,
                             scrollY: true,
                             mouseWheel: true,
-                            wheelAction: 'zoom'
+                            wheelAction: 'zoom',
+                            click:true
                         });
 
                     }
