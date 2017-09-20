@@ -10,6 +10,7 @@ require.config({
         'data': '/js/data',
         'axios': 'https://cdn.bootcss.com/axios/0.16.2/axios.min',
         'vue': 'https://cdn.bootcss.com/vue/2.4.2/vue.min',
+        'iscroll':'https://cdn.bootcss.com/iScroll/5.2.0/iscroll-zoom.min',
         'layer': 'js/layer/layer',
         'embedpano': '/krpano/embedpano',
         'krpano': '/krpano/krpano',

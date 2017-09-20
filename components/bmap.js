@@ -1,12 +1,14 @@
 define([
     'vue',
     'jquery',
+    'iscroll',
     'layer'
-], function(Vue, $) {
+], function(Vue, $,IScroll) {
     'use strict';
 
-
+    console.log(IScroll);
     var map;
+    var myScroll;
     var mymap = {
         template: `<div class="mymap">
             <div id="allmap"></div>
@@ -63,7 +65,9 @@ define([
             },
             showBigImage() {
                 let content = `<div class="imgcon">
-                                    <img src="http://ww1.sinaimg.cn/large/006poVAQgy1fi5bbxzdmkj30go0afdh4.jpg" />
+                                    <div class="zoom">
+                                        <img src="http://ww1.sinaimg.cn/large/006poVAQgy1fi5bbxzdmkj30go0afdh4.jpg" />
+                                    </div>
                                     <a href="http://ww1.sinaimg.cn/large/006poVAQgy1fi5bbxzdmkj30go0afdh4.jpg" download="lifemap" class="iconfont icon-download icondownload"></a>
                                 </div>`
                 layer.open({
@@ -79,6 +83,14 @@ define([
                         $(elem).on("click", "img", () => {
                             layer.close(index);
                         })
+                        myScroll = new IScroll($(".imgcon")[0], {
+                            zoom: true,
+                            scrollX: true,
+                            scrollY: true,
+                            mouseWheel: true,
+                            wheelAction: 'zoom'
+                        });
+
                     }
                 })
 
