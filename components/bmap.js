@@ -9,6 +9,9 @@ define([
     console.log(IScroll);
     var map;
     var myScroll;
+
+    document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+
     var mymap = {
         template: `<div class="mymap">
             <div id="allmap"></div>
