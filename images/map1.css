@@ -135,6 +135,42 @@ body {
     border-radius: 5px
 }
 
+.imgPage {
+    background: #000
+}
+
+.imgPage .imgcon {
+    height: 100%;
+    width: 100%
+}
+
+.imgPage .imgcon img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+    display: block
+}
+
+.imgPage .imgcon>a {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    z-index: 99;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    background: #333
+}
+
+.imgPage .imgcon>a:before {
+    font: 26px/40px 'iconfont';
+    width: 40px;
+    text-align: center;
+    color: #fff;
+    display: block
+}
+
 .download {
     position: fixed;
     bottom: 0;

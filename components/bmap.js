@@ -12,7 +12,7 @@ define([
             <div id="allmap"></div>
             <div class="mylayer hide">
                 <h5>{{activePoint.vrName}}</h5>
-                <div class="fimg"><img src="http://ww1.sinaimg.cn/large/006poVAQgy1fi5bbxzdmkj30go0afdh4.jpg" /></div>
+                <div class="fimg"><img @click="showBigImage" src="http://ww1.sinaimg.cn/large/006poVAQgy1fi5bbxzdmkj30go0afdh4.jpg" /></div>
                 <div class="ftxt">{{activePoint.vrContent}} >></div>
                 <footer @click="notiveDown"><i class="icon-heart iconfont active"></i> 想去</footer>
             </div>
@@ -60,6 +60,28 @@ define([
                     title: false,
                     content: $(".mylayer")
                 });
+            },
+            showBigImage() {
+                let content = `<div class="imgcon">
+                                    <img src="http://ww1.sinaimg.cn/large/006poVAQgy1fi5bbxzdmkj30go0afdh4.jpg" />
+                                    <a href="http://ww1.sinaimg.cn/large/006poVAQgy1fi5bbxzdmkj30go0afdh4.jpg" download="lifemap" class="iconfont icon-download icondownload"></a>
+                                </div>`
+                layer.open({
+                    type: 1,
+                    area: ['100%', '100%'],
+                    skin: 'imgPage',
+                    shade: 0.01,
+                    closeBtn: 0,
+                    shadeClose: true,
+                    title: false,
+                    content: content,
+                    success: (elem, index) => {
+                        $(elem).on("click", "img", () => {
+                            layer.close(index);
+                        })
+                    }
+                })
+
             },
             getCenter() {
                 let w = $(window).width() / 2 | 0;
