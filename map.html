@@ -38,6 +38,9 @@
 </body>
 
 </html>
+
+
+
 <script type="text/javascript">
     // 百度地图API功能
     var map = new BMap.Map("allmap"); // 创建地图实例
@@ -98,41 +101,44 @@
         });
     });
 
-    // var A = axios.create({
-    //     baseURL: 'http://api.map.baidu.com/geodata/v3/geotable/',
-    //     timeout: 1000,
-    //     headers: {
-    //         'Access-Control-Allow-Origin': '*'
-    //     },
-    //     params: {
-    //         ak: 'cBv1W8kpZ2EG0GdoyLKDSGZB'
-    //     },
-    // });
+    var A = axios.create({
+        baseURL: 'http://api.map.baidu.com/geodata/v3/geotable/',
+        timeout: 1000,
+        headers: {
+            'Access-Control-Allow-Origin': '*'
+        },
+        params: {
+            ak: 'YrriezM4sc98COn6ZoIYVtt6gYU4a2OE'
+        },
+    });
 
     function funName(data) {
         console.log(data);
+        // curl http://api.map.baidu.com/geodata/v4/geotable/list?ak=YrriezM4sc98COn6ZoIYVtt6gYU4a2OE
     }
 
-
-    $.ajax({
-            url: "http://api.map.baidu.com/geodata/v4/geotable/list",
-            traditional: true,
-            dataType: "json",
-            type: 'GET',
-            xhrFields: {
-                origin: true,
-                withCredentials: true
-            },
-            crossDomain: true,
-            data: {
-                ak: 'W7B5n2Ns2kAPrcix8vQOTStyEQjUElU8',
-
-            },
-            success: function(data) {
-                console.log(data);
-            }
-        })
-        .then(function(data) {
+    A.get("http://api.map.baidu.com/geodata/v4/geotable/list")
+        .then((data)=>{
             console.log(data);
         });
+
+
+    // $.ajax({
+    //         url: "http://api.map.baidu.com/geodata/v4/geotable/list",
+    //         traditional: true,
+    //         dataType: "json",
+    //         type: 'GET',
+    //         xhrFields: {
+    //             origin: true,
+    //             withCredentials: true
+    //         },
+    //         crossDomain: true,
+    //         data: {
+    //             ak: 'YrriezM4sc98COn6ZoIYVtt6gYU4a2OE',
+
+    //         },
+    //         success: function(data) {
+    //             console.log(data);
+    //         }
+    //     });
 </script>
