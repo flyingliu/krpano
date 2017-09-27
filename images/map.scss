@@ -1,0 +1,212 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background: #ccc;
+    margin: 0;
+}
+
+#app {
+    width: 100%;
+    height: 100%;
+}
+
+.hide {
+    display: none;
+}
+
+.mymap {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    font-size: 12px;
+    #allmap {
+        width: 100%;
+        height: 100%;
+    }
+    .mylayer {
+        width: 210px;
+        h5 {
+            margin: 0;
+            font: bold 14px/45px arial;
+            text-align: center;
+            height: 45px;
+            overflow: hidden;
+        }
+        .fimg {
+            text-align: center;
+            height: 120px;
+            img {
+                width: 120px;
+                height: 120px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        }
+        .ftxt {
+            margin: 10px;
+            line-height: 22px;
+            color: rgba(0, 0, 0, .5);
+            height: 22px * 3;
+            overflow: hidden;
+        }
+        footer {
+            border-top: 1px solid #ccc;
+            margin: 0 10px;
+            font: 14px/50px arial;
+            text-align: center;
+            color: rgba(0, 0, 0, .5);
+            .iconfont {
+                font-size: 14px;
+                &.active {
+                    color: red;
+                }
+            }
+        }
+    }
+    .mynav {
+        position: absolute;
+        top: 10px;
+        right: 16px;
+        width: 32px;
+        height: 32px;
+        >i {
+            background: rgba(0, 0, 0, .5);
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: block;
+            text-align: center;
+            &:before {
+                color: #fff;
+                font: 16px/32px 'iconfont';
+                width: 32px;
+                text-align: center;
+            }
+        }
+        >nav {
+            width: 80px;
+            list-style: none;
+            position: absolute;
+            right: 0;
+            top: 40px;
+            li {
+                height: 32px;
+                width: 100%;
+                border-bottom: 1px solid rgba(255, 255, 255, .5);
+                font: 12px/32px arial;
+                background: rgba(0, 0, 0, .5);
+                padding: 0 0 0 10px;
+                box-sizing: border-box;
+                color: #fff;
+                &:first-child {
+                    border-radius: 5px 5px 0 0;
+                }
+                &:last-of-type {
+                    border-radius: 0 0 5px 5px;
+                }
+                &.active {
+                    background: rgba(0, 0, 0, .8);
+                }
+            }
+        }
+    }
+}
+
+.layui-layer {
+    border-radius: 5px;
+}
+
+.imgPage {
+    background: #000;
+    .imgcon {
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        .zoom {
+            height: 100%;
+            width: 100%;
+        }
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+            display: block;
+        }
+        >a {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            z-index: 99;
+            width: 40px;
+            height: 40px;
+            border-radius: 5px;
+            background: rgba(51, 51, 51, 1);
+            &:before {
+                font: 26px/40px 'iconfont';
+                width: 40px;
+                text-align: center;
+                color: #fff;
+                display: block;
+            }
+        }
+    }
+}
+
+
+.download {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #fff;
+    padding: 10px 0 0 60px;
+    z-index: 99999999999;
+    box-sizing: border-box;
+    .logo {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        font-size: 30px;
+        line-height: 40px;
+        color: #007AFF;
+    }
+    .tip {
+        p {
+            line-height: 20px;
+            margin: 0;
+        }
+        p:nth-child(1) {
+            color: #007AFF;
+            font-size: 12px;
+        }
+        p:nth-child(2) {
+            color: #949396;
+            font-size: 12px;
+        }
+    }
+    .btn-download {
+        width: 70px;
+        height: 30px;
+        background-color: #007AFF;
+        color: #fff;
+        border: 0;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        border-radius: 2px;
+    }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity .5s
+}
+
+.fade-enter,
+.fade-leave-to {
+    opacity: 0
+}
