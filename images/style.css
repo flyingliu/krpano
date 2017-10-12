@@ -1,1 +1,5 @@
 html,body,#pano {padding:0;margin:0;width:100%;height: 100%; overflow: hidden;}
+
+.div { max-width:100px; background: red;color:#fff; height: 40px; overflow: hidden;transition:all .5s ease-in .1s; display: inline-block;}
+.div h1 { margin: 0; font:20px/40px arial;}
+.div:hover { max-width:1000px;}

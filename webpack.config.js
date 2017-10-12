@@ -31,11 +31,11 @@ module.exports = {
         publicPath: "dist/newjs/",
         filename: "[name].js",
         chunkFilename: "[chunkhash].js",
-        libraryTarget : 'var' 
+        libraryTarget: 'var'
     },
     resolve: {
         alias: {
-            jquery: srcDir +  "/js/jquery.js",
+            jquery: srcDir + "/js/jquery.js",
             core: srcDir + "/js/core",
             ui: srcDir + "/js/ui"
         }
@@ -43,29 +43,28 @@ module.exports = {
 
     module: {
         loaders: [{
-            test: /\.js[x]?$/,
-            exclude: /node_modules/,
-            loader: 'babel-loader',
-            // include: path.resolve(__dirname, "./newjs"),
-            options: {
-                'presets': ['latest']
+                test: /\.js[x]?$/,
+                exclude: /node_modules/,
+                loader: 'babel-loader',
+                // include: path.resolve(__dirname, "./newjs"),
+                options: {
+                    'presets': ['latest']
+                }
+            }, {
+                test: /\.css$/,
+                loader: 'style-loader!css-loader'
+            },
+            {
+                test: /\.scss$/,
+                loader: 'style-loader!css-loader!sass-loader'
+            }, {
+                test: /\.html/,
+                loader: "html-loader"
             }
-        }, {
-            test: /\.css$/,
-            loader: ExtractTextPlugin.extract('style-loader', 'css-loader?-convertValues')
-        }, {
-            test: /\.less$/,
-            loader: ExtractTextPlugin.extract('style-loader', 'css-loader?-convertValues!less-loader')
-        }, {
-            test: /\.scss$/,
-            loader: ExtractTextPlugin.extract('style-loader', 'css-loader?-convertValues!sass-loader')
-        }, {
-            test: /\.html/,
-            loader: "html-loader"
-        }]
+        ]
     },
     plugins: [
-        new CommonsChunkPlugin('common'),
-        new ExtractTextPlugin("styles.css")
+        new CommonsChunkPlugin('common')
+        // new ExtractTextPlugin("styles.css")
     ]
 };

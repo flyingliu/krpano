@@ -44,8 +44,7 @@ gulp.task('copy:html', function (done) {
 
 //压缩合并css, css中既有自己写的.less, 也有引入第三方库的.css
 gulp.task('lessmin', function (done) {
-    gulp.src(['css/main.less', 'css/*.css'])
-        .pipe(less())
+    gulp.src(['images/*.css'])
         //这里可以加css sprite 让每一个css合并为一个雪碧图
         //.pipe(spriter({}))
         .pipe(concat('style.min.css'))
@@ -127,10 +126,14 @@ gulp.task("build-js", function (callback) {
 
 gulp.task('watch', function () {
     gulp.watch('./newjs/*.js', [ 'build-js'])
+
+    gulp.watch(['images/*.css'],['lessmin'])
+    gulp.watch(['app/**/*'],['copy:html'])
+
 });
 
 //发布
 gulp.task('default', ['connect', 'fileinclude', 'open']);
 
 //开发
-gulp.task('dev', [ 'copy:images','copy:html', 'build-js', 'connect','open','watch']);
+gulp.task('dev', [ 'copy:images','copy:html', 'build-js', 'connect','open','lessmin','watch']);

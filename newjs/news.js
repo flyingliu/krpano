@@ -1,4 +1,4 @@
-
+require('../images/list.scss');
 import add from "../js/add"
 import $ from "jquery"
 let myadd = add(3,4);
