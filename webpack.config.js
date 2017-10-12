@@ -65,7 +65,7 @@ module.exports = {
         }]
     },
     plugins: [
-        new CommonsChunkPlugin('common')
-        // new ExtractTextPlugin("styles.css")
+        new CommonsChunkPlugin('common'),
+        new ExtractTextPlugin("styles.css")
     ]
 };
