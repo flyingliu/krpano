@@ -20,7 +20,7 @@ var gulp = require('gulp'),
     connect = require('gulp-connect');
 
 var host = {
-    path: 'dist/app',
+    path: 'dist',
     port: 3000,
     html: 'news.html'
 };
@@ -105,7 +105,7 @@ gulp.task('open', function (done) {
     gulp.src('')
         .pipe(gulpOpen({
             app: browser,
-            uri: 'http://localhost:3000/news.html'
+            uri: 'http://localhost:3000/app/news.html'
         }))
         .on('end', done);
 });
@@ -126,7 +126,7 @@ gulp.task("build-js", function (callback) {
 });
 
 gulp.task('watch', function () {
-    gulp.watch('./**/*.js', [ 'build-js'])
+    gulp.watch('./newjs/*.js', [ 'build-js'])
 });
 
 //发布

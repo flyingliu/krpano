@@ -7,7 +7,7 @@ var srcDir = path.resolve(process.cwd(), '.');
 
 //获取多页面的每个入口文件，用于配置中的entry
 function getEntry() {
-    var jsPath = path.resolve(srcDir, 'js');
+    var jsPath = path.resolve(srcDir, 'newjs');
     var dirs = fs.readdirSync(jsPath);
     var matchs = [],
         files = {};
@@ -15,7 +15,7 @@ function getEntry() {
         matchs = item.match(/(.+)\.js$/);
         console.log(matchs);
         if (matchs) {
-            files[matchs[1]] = path.resolve(srcDir, 'js', item);
+            files[matchs[1]] = path.resolve(srcDir, 'newjs', item);
         }
     });
     console.log(JSON.stringify(files));
@@ -24,11 +24,11 @@ function getEntry() {
 
 module.exports = {
     cache: true,
-    devtool: "#source-map",
+    devtool: "newjs/news.js",
     entry: getEntry(),
     output: {
-        path: path.join(__dirname, "dist/js/"),
-        publicPath: "dist/js/",
+        path: path.join(__dirname, "dist/newjs/"),
+        publicPath: "dist/newjs/",
         filename: "[name].js",
         chunkFilename: "[chunkhash].js"
     },
@@ -45,8 +45,9 @@ module.exports = {
             test: /\.js[x]?$/,
             exclude: /node_modules/,
             loader: 'babel-loader',
-            query: {
-                compact: false
+            // include: path.resolve(__dirname, "./newjs"),
+            options: {
+                'presets': ['latest']
             }
         }, {
             test: /\.css$/,
