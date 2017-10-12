@@ -30,11 +30,12 @@ module.exports = {
         path: path.join(__dirname, "dist/newjs/"),
         publicPath: "dist/newjs/",
         filename: "[name].js",
-        chunkFilename: "[chunkhash].js"
+        chunkFilename: "[chunkhash].js",
+        libraryTarget : 'var' 
     },
     resolve: {
         alias: {
-            jquery: srcDir + "/js/lib/jquery.min.js",
+            jquery: srcDir +  "/js/jquery.js",
             core: srcDir + "/js/core",
             ui: srcDir + "/js/ui"
         }
